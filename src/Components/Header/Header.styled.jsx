@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FiShoppingCart } from 'react-icons/fi';
 
 
+
 export const MainHeader = styled.header`
     position: relative;
 `
@@ -29,6 +30,7 @@ export const NavigationItem = styled.li`
         transform: scale(1.3);
     }
 `
+
 
 export const CartOpen = styled.div`
      position: absolute;

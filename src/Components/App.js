@@ -71,9 +71,13 @@ const onAdd = (item) => {
 
 }
 
+const deleteOrder = (id) => {
+    setOrder(orders => orders.filter(el => el.id !== id))
+}
+
 return (
     <Container>
-        <Header orders={orders}/>
+        <Header orders={orders} deleteOrder={deleteOrder}/>
         <Items items={items} onAdd={onAdd}/>
         <Footer/>
     </Container>
