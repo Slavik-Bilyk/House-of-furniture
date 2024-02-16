@@ -4,6 +4,9 @@ import { MainHeader, HeaderLogo, NavigationList, NavigationItem, CartOpen, Prese
 
 
 const showOrders = orders => {
+
+    console.log(orders);
+
     return (
         <div>
             {orders.map(item => (
@@ -18,8 +21,10 @@ const showNothing = () => {
         <div>
             Тут пусто
         </div>
+
     )
 }
+
 
 
 export default function Header({orders}) {
