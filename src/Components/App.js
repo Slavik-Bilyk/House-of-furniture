@@ -12,7 +12,7 @@ export default function App() {
 const [items, setItems] = useState([
     {
         id: 1,
-        img: 'chair1.jpg',
+        img: 'chair.jpg',
         title: 'Стілець білий',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
@@ -22,32 +22,32 @@ const [items, setItems] = useState([
 
     {
         id: 2,
-        img: 'chair1.jpg',
+        img: 'table.jpg',
         title: 'Стіл',
-        price: 49.99,
+        price: 99.99,
         descr: 'lorem lorem lorem lorem lorem ',
         category: 'table'
     },
 
     { 
         id: 3,
-        img: 'chair1.jpg',
+        img: 'Sofa.jpg',
         title: 'Диван',
-        price: 49.99,
+        price: 349.00,
         descr: 'lorem lorem lorem lorem lorem ',
         category: 'sofa'
     },
     { 
         id: 4,
-        img: 'chair1.jpg',
+        img: 'light.jpg',
         title: 'Нічник',
-        price: 49.99,
+        price: 39.99,
         descr: 'lorem lorem lorem lorem lorem ',
         category: 'light'
     },
     { 
         id: 5,
-        img: 'chair1.jpg',
+        img: 'chair.jpg',
         title: 'Стілець білий',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
@@ -55,7 +55,7 @@ const [items, setItems] = useState([
     },
     { 
         id: 6,
-        img: 'chair1.jpg',
+        img: 'chair.jpg',
         title: 'Стілець білий',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',

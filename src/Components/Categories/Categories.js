@@ -10,7 +10,7 @@ export default function Categories({ choseCategory }) {
         },
         {
             key: 'chair',
-            name: 'Крісла'
+            name: 'Стільці'
         },
         {
             key: 'table',
