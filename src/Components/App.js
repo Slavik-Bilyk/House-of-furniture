@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import './index.css'
 import Items from "./Items/Items";
 import Order from "./Order/Order";
 import {Container} from './App.styled'
+import Categiries from "./Categories/Categories";
 
 export default function App() {
 
@@ -22,27 +23,27 @@ const [items, setItems] = useState([
     {
         id: 2,
         img: 'chair1.jpg',
-        title: 'Стілець білий',
+        title: 'Стіл',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
-        category: 'chair'
+        category: 'table'
     },
 
     { 
         id: 3,
         img: 'chair1.jpg',
-        title: 'Стілець білий',
+        title: 'Диван',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
-        category: 'chair'
+        category: 'sofa'
     },
     { 
         id: 4,
         img: 'chair1.jpg',
-        title: 'Стілець білий',
+        title: 'Нічник',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
-        category: 'chair'
+        category: 'light'
     },
     { 
         id: 5,
@@ -62,14 +63,25 @@ const [items, setItems] = useState([
     },
  
 ])
-
 const [orders, setOrder] = useState([])
+const [currentItems, setCurrentItems] = useState(items)
 
 const onAdd = (item) => {
 
     setOrder([...orders, item])
 
 }
+
+const choseCategory = category => {
+    if (category === 'all') {
+        setCurrentItems(items);
+        return;
+    }
+
+    setCurrentItems(items.filter(el => el.category === category));
+}
+
+
 
 const deleteOrder = (id) => {
     setOrder(orders => orders.filter(el => el.id !== id))
@@ -78,7 +90,8 @@ const deleteOrder = (id) => {
 return (
     <Container>
         <Header orders={orders} deleteOrder={deleteOrder}/>
-        <Items items={items} onAdd={onAdd}/>
+        <Categiries choseCategory={choseCategory}/>
+        <Items items={currentItems} onAdd={onAdd}/>
         <Footer/>
     </Container>
 )
