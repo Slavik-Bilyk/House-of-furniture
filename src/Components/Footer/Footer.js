@@ -1,11 +1,12 @@
+import { FooterTag } from "./Footer.styled";
+
 export default function Footer() {
-
-return (
-    <footer>
-        <div>
-            Всьо чікен бамбоні
-        </div>
-    </footer>
-)
-
+  const currentYear = new Date().getFullYear();
+  return (
+    <FooterTag>
+      <div>
+        <span>Всьо чікен бамбоні (с) {currentYear} </span>
+      </div>
+    </FooterTag>
+  );
 }
