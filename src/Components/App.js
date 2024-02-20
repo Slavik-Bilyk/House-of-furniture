@@ -6,6 +6,7 @@ import Items from "./Items/Items";
 import Order from "./Order/Order";
 import {Container} from './App.styled'
 import Categiries from "./Categories/Categories";
+import ShowFullItem from "./ShowFullItem/ShowFullItem";
 
 export default function App() {
 
@@ -65,6 +66,8 @@ const [items, setItems] = useState([
 ])
 const [orders, setOrder] = useState([])
 const [currentItems, setCurrentItems] = useState(items)
+const [showFullItem, setShowFullItem] = useState(false)
+const [fullItem, setFullItem] = useState([])
 
 const onAdd = (item) => {
 
@@ -81,7 +84,10 @@ const choseCategory = category => {
     setCurrentItems(items.filter(el => el.category === category));
 }
 
-
+const onShowItem = (item) => {
+    setFullItem(item)
+    setShowFullItem(showFullItem => !showFullItem)
+}
 
 const deleteOrder = (id) => {
     setOrder(orders => orders.filter(el => el.id !== id))
@@ -91,7 +97,8 @@ return (
     <Container>
         <Header orders={orders} deleteOrder={deleteOrder}/>
         <Categiries choseCategory={choseCategory}/>
-        <Items items={currentItems} onAdd={onAdd}/>
+        <Items onShowItem={onShowItem} items={currentItems} onAdd={onAdd}/>
+        {showFullItem && <ShowFullItem onAdd={onAdd} item={fullItem} onShowItem={onShowItem}/>}
         <Footer/>
     </Container>
 )
