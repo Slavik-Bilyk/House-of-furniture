@@ -11,7 +11,7 @@ export const ItemList = styled.div`
     width: 30%;
     overflow: hidden;
     margin-bottom: 30px;
-    background-color: #333;
+    background-color: #5f5a4e;
 `
 
 export const ItemImg = styled.img`

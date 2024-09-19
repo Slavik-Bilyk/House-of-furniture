@@ -32,7 +32,7 @@ export default function Header({orders, deleteOrder}) {
 
     return (
         <MainHeader>
-            <HeaderLogo>Houe Staf</HeaderLogo>
+            <HeaderLogo>House Staf</HeaderLogo>
             <NavigationList>
                 <StyledCartIcon onClick={() => {setCartOpen(cartOpen => !cartOpen)}} className={`${cartOpen && 'active'}`}/>
                 <NavigationItem>Про нас</NavigationItem>

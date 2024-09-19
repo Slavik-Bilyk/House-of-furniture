@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Category = styled.div`
+    font-size: 20px;
     display: inline-block;
-    background: #f2f2f2;
+    background: #816e6e;
     border-radius: 50%;
     padding: 10px 20px;
     margin-bottom: 25px;

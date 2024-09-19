@@ -7,22 +7,27 @@ export const MainHeader = styled.header`
     position: relative;
 `
 
+
+
 export const HeaderLogo = styled.div`
     font-size: 40px;
     position: absolute;
+    font-weight: 600;
+
 `
 
 export const NavigationList = styled.ul`
     display: flex;
     list-style: none;
     justify-content: right;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 `
 
 export const NavigationItem = styled.li`
      margin-left: 30px;
     transition: transform 500ms ease;
     cursor: pointer;
+    font-size: 20px;
 
     &:hover {
         opacity: 0.5;
@@ -54,10 +59,10 @@ export const Presentation = styled.div`
     background-blend-mode: multiply;
     background-color: rgb(196, 192, 192);
     margin-bottom: 30px;
-    position: relative; /* Додаємо позицію relative для коректної роботи псевдоелементів ::after та ::before */
+    position: relative;
   
     &::after {
-        content: 'Кращі товари для вашого будинку';
+        content: 'Кращі товри для вашого sdбудинку';
         position: absolute;
         top: 100px;
         left: 50px;
@@ -79,6 +84,7 @@ export const Presentation = styled.div`
 export const StyledCartIcon = styled(FiShoppingCart )`
          transition: transform 500ms ease;
          cursor: pointer;
+         font-size: 20px;
 
          &:hover {
             transform: scale(1.5);

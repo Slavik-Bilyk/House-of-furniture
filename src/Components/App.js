@@ -48,20 +48,21 @@ const [items, setItems] = useState([
     },
     { 
         id: 5,
-        img: 'chair.jpg',
-        title: 'Стілець білий',
-        price: 49.99,
+        img: 'chair3.jpg',
+        title: 'Стілець Чорний',
+        price: 59.99,
         descr: 'lorem lorem lorem lorem lorem ',
         category: 'chair'
     },
     { 
         id: 6,
-        img: 'chair.jpg',
-        title: 'Стілець білий',
+        img: 'chair2.jpg',
+        title: 'Стілець Cірий',
         price: 49.99,
         descr: 'lorem lorem lorem lorem lorem ',
         category: 'chair'
     },
+
  
 ])
 const [orders, setOrder] = useState([])
